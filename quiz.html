@@ -3,15 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Happiness: a growth story </title>
+    <h1>Happiness: a growth story </h1>
+
 <link rel="stylesheet" href="Assets/CSS/style.css"> </link>  
+
+<div> Score:</div>
+<div id ="score">0</div>
+
 </head>
   <body>
     <div id="questions"></div>
-    <div class="choice" id="choice1"></div>
-    <div class="choice"  id="choice2"></div>
-    <div class="choice" id="choice3"></div>
-    <div class="choice" id="choice4"></div>
+    <div class="choice" id="choice1" onclick="checkAnswer(1)"></div> 
+    <div class="choice" id="choice2" onclick="checkAnswer(2)"></div>
+    <div class="choice" id="choice3" onclick="checkAnswer(3)"></div>
+    <div class="choice" id="choice4" onclick="checkAnswer(4)"></div>
     <script src="Assets/Javascript/game.js"></script>
   </body>
 </html>
