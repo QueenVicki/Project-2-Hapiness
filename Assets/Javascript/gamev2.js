@@ -2,7 +2,6 @@ const questions = [
     {
         question: "Who lives in a pineapple under the sea?",
         correct: 0,
-        category: 'sun', 
         answers: [
             "Spongebob",
             "Squidward",
@@ -13,7 +12,6 @@ const questions = [
     {
         question: "Who goes to visit their grandmother in the forest?",
         correct: 2,
-        category: 'water', 
         answers: [
             "A wolf",
             "Kevin from the pub",
@@ -24,7 +22,6 @@ const questions = [
     {
         question: "What is 2+2 if the answer is 'blue'?",
         correct: 1,
-        category: 'fertiliser', 
         answers: [
             "Spongebob",
             "Blue",
@@ -35,7 +32,6 @@ const questions = [
     {
         question: "What do you call a bear with no teeth?",
         correct: 3,
-        category: 'smiles', 
         answers: [
             "Gummy bear",
             "Toothless",
@@ -46,7 +42,6 @@ const questions = [
     {
         question: "Why did the tomato turn red?",
         correct: 0,
-        category: 'vegetables', 
         answers: [
             "Because it saw the salad dressing!",
             "Because it was ripe",
@@ -57,7 +52,6 @@ const questions = [
     {
         question: "What do you call fake spaghetti?",
         correct: 1,
-        category: 'culinary', 
         answers: [
             "Im-pasta",
             "An impasta",
@@ -68,7 +62,6 @@ const questions = [
     {
         question: "What did one hat say to the other?",
         correct: 2,
-        category: 'fashion', 
         answers: [
             "You're a head above the rest",
             "I'm on top of things",
@@ -79,7 +72,6 @@ const questions = [
     {
         question: "Why don't skeletons fight each other?",
         correct: 3,
-        category: 'anatomy', 
         answers: [
             "They're too busy dancing",
             "They're afraid of breaking a bone",
@@ -90,7 +82,6 @@ const questions = [
     {
         question: "How do you organize a space party?",
         correct: 0,
-        category: 'cosmos', 
         answers: [
             "You planet!",
             "Send out invitations",
@@ -101,7 +92,6 @@ const questions = [
     {
         question: "Why don't scientists trust atoms?",
         correct: 1,
-        category: 'chemistry', 
         answers: [
             "Because they make up everything",
             "Because they're always splitting",
@@ -118,14 +108,14 @@ function generateNumber() {
 };
 
 
-function checkAnswer(answer, choice, score) {
+function checkAnswer(answer, choice) {
     let  result
     if (answer === choice) {
         result = true
     } else {
         result = false   
     }    
-    return {result, score}
+    return result
 };
 
 function updateScore(result, score) {
@@ -138,9 +128,8 @@ function updateScore(result, score) {
         updatedScore--;
         updatedScore < 0 ? updatedScore = 0 : updatedScore;
     };
-    next = generateNumber();
     scoreEl.textContent = updatedScore;
-    return {next, updatedScore};
+    return updatedScore;
 };
 
 
@@ -164,18 +153,26 @@ document.addEventListener('DOMContentLoaded', () => {
         answer.classList.add('choice');
         answer.textContent = answerText;
 
+        // ========================================
+        // All the changes happen inside of here
         answer.addEventListener('click', () => {
-            const { result} = checkAnswer(correct, answerIndex);
-            const {next, updatedScore} = updateScore(result, score);
-            randNum = next;
+            const result = checkAnswer(correct, answerIndex);
+            
+            const updatedScore = updateScore(result, score);
             score = updatedScore;
+            
+            randNum = generateNumber()
             currentQuestion = sessionQuestions[randNum];
             ctn.removeChild(el);
             game();
         })
+        //^^ All the changes happen inside of here ^^
+        // ========================================
         
         el.appendChild(answer);
         ctn.appendChild(el);
+        //^^ And the new question is injected here ^^
+        // ========================================
     });
     };
 });
