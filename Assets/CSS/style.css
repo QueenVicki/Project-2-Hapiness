@@ -11,10 +11,15 @@ background-color: aqua;
     background-color:white;
     color: black;
     display: block;
+    cursor: pointer;
     max-width: 50%;
 }
 
 .choice:hover {
     background-color:black;
+    color: white;
+}
+.choice:active {
+    background-color:grey;
     color: white;
 }
