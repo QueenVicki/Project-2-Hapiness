@@ -1,3 +1,5 @@
+
+
 const questions = [
     {
         question: "Who lives in a pineapple under the sea?",
@@ -93,8 +95,8 @@ const questions = [
         question: "Why don't scientists trust atoms?",
         correct: 1,
         answers: [
-            "Because they make up everything",
-            "Because they're always splitting",
+            "Because they make up everything", 
+            "Because they're always splitting", 
             "Because they're too small to see",
             "Because they're unstable"
         ]
@@ -119,7 +121,6 @@ function checkAnswer(answer, choice) {
 };
 
 function updateScore(result, score) {
-    let next;
     let scoreEl = document.querySelector('#score');
     let updatedScore = score;
     if (result) {
@@ -134,13 +135,21 @@ function updateScore(result, score) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Copy array to avoid mutations
     let sessionQuestions = [...questions];
+    // Select container
     let ctn = document.querySelector('#questions');
+    // Initialise score variable
     let score = 0;
+    // Get random num to use as index to select question
     let randNum = generateNumber();
 
+    
     game();
 
+    // ================
+    // The game engine:
+    // ================
     function game() {
         currentQuestion = sessionQuestions[randNum];
         const {correct, question: label} = currentQuestion;
@@ -149,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
        el.textContent = label;
 
        currentQuestion.answers.forEach((answerText, answerIndex) => {
-        answer = document.createElement('li');
+        let answer = document.createElement('li');
         answer.classList.add('choice');
         answer.textContent = answerText;
 
@@ -164,6 +173,8 @@ document.addEventListener('DOMContentLoaded', () => {
             randNum = generateNumber()
             currentQuestion = sessionQuestions[randNum];
             ctn.removeChild(el);
+
+            // Can I call this "recursion"? "Event-driven recursion", I guess!
             game();
         })
         //^^ All the changes happen inside of here ^^
@@ -176,3 +187,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     };
 });
+
+/**
+ * One last note on the game loop, to ensure that no questions appears twice,
+ * we could splice-remove the question once it has been answered.
+ * Subsequently, an empty array of questions would signal the end of the game.
+ */
