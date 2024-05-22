@@ -3,94 +3,114 @@ const questions = [
         question: "Which of the following is a true statement about people?",
         correct: 0,
         answers: [
-            "A) People have a unique set of fingerprints.",
-            "B) People can survive longer without food than without sleep.",
-            "C) People's hair grows faster during the winter months.",
-            "D) People can only see three primary colors."
+            "People have a unique set of fingerprints.",
+            "People can survive longer without food than without sleep.",
+            "People's hair grows faster during the winter months.",
+            "People can only see three primary colors."
         ]
     },
     {
         question: "Which of the following is a true statement about plants?",
         correct: 1,
         answers: [
-            "A) Plants are capable of feeling emotions.",
-            "B) All plants reproduce through seeds.",
-            "C) Plants require sleep like humans.",
-            "D) All plants are toxic to humans."
+            "Plants are capable of feeling emotions.",
+            "All plants reproduce through seeds.",
+            "Plants require sleep like humans.",
+            "All plants are toxic to humans."
         ]
     },
     {
         question: "What is 2+2 if the answer is 'blue'?",
         correct: 1,
         answers: [
-            "A) Spongebob.",
-            "B) Blue.",
-            "C) 4.",
-            "D) I don't like games."
+            "Spongebob.",
+            "Blue.",
+            "4.",
+            "I don't like games."
+        ]
+    },
+    {
+        question: "Why did the tomato turn red?",
+        correct: 1,
+        answers: [
+            "It was embarrassed.",
+            "It saw the salad dressing.",
+            "It got sunburned.",
+            "It met a cucumber."
+        ]
+    },
+    {
+        question: "What do you call a plant that works in an office?",
+        correct: 3,
+        answers: [
+            "A desk fern.",
+            "A potted boss.",
+            "A leaf executive.",
+            "A branch manager."
         ]
     },
     {
         question: "True or False: People who laugh more often tend to live longer lives.",
         correct: 0,
         answers: [
-            "A) True.",
-            "B) False."
+            "True.",
+            "False."
         ]
     },
     {
         question: "Which of the following is a true statement about sunflowers?",
         correct: 1,
         answers: [
-            "A) Sunflowers are all annual plants.",
-            "B) Sunflowers have been cultivated for over 5,000 years.",
-            "C) Sunflowers can only grow in sandy soil.",
-            "D) Sunflowers are immune to pests and diseases."
+            "Sunflowers are all annual plants.",
+            "Sunflowers have been cultivated for over 5,000 years.",
+            "Sunflowers can only grow in sandy soil.",
+            "Sunflowers are immune to pests and diseases."
         ]
     },
     {
         question: "True or False: People are more likely to remember negative experiences over positive ones.",
         correct: 0,
         answers: [
-            "A) True.",
-            "B) False.",
+            "True.",
+            "False.",
         ]
     },
     {
         question: "Which of the following is a true statement about plants?",
         correct: 3,
         answers: [
-            "A) All plants require the same amount of water to thrive.",
-            "B) Plants don't have a circulatory system.",
-            "C) All plants reproduce through spores.",
-            "D) Plants can convert sunlight into energy through a process called photosynthesis."
+            "All plants require the same amount of water to thrive.",
+            "Plants don't have a circulatory system.",
+            "All plants reproduce through spores.",
+            "Plants can convert sunlight into energy through a process called photosynthesis."
         ]
     },
     {
         question: "Which of the following is a true statement about happiness?",
         correct: 1,
         answers: [
-            "A) Happiness is solely determined by external circumstances.",
-            "B) Helping others has been shown to increase happiness levels.",
-            "C) Happiness is a fixed trait and cannot be changed.",
-            "D) Pursuing wealth is the most reliable path to happiness."
+            "Happiness is solely determined by external circumstances.",
+            "Helping others has been shown to increase happiness levels.",
+            "Happiness is a fixed trait and cannot be changed.",
+            "Pursuing wealth is the most reliable path to happiness."
         ]
     },
     {
         question: "True or False: Sunflowers are heliotropic, meaning they track the movement of the sun across the sky.",
         correct: 0,
         answers: [
-            "A) True.",
-            "B) False."
+            "True.",
+            "False."
         ]
     },
     {
         question: "Which of the following is a true statement about people?",
         correct: 3,
         answers: [
-            "A) People are born with all their brain cells.",
-            "B) People blink about 10,000 times a day.",
-            "C) People can't feel pain in their dreams.",
-            "D) People have more bones in their feet than in their hands."
+            "People are born with all their brain cells.",
+            "People blink about 10,000 times a day.",
+            "People can't feel pain in their dreams.",
+            "People have more bones in their feet than in their hands."
         ]
     },
     {
@@ -105,7 +125,7 @@ const questions = [
         question: "Which of the following is a true statement about people?",
         correct: 3,
         answers: [
-            "A) People are born with all their brain cells.",
+            "People are born with all their brain cells.",
             "B) People blink about 10,000 times a day.",
             "C) People can't feel pain in their dreams.",
             "D) People have more bones in their feet than in their hands."
