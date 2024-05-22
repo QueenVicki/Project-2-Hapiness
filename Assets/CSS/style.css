@@ -37,14 +37,22 @@ background: url('../Image/Backgrounds/2.gif');
     }
 
     #board{
-    width: 545px;
-    height: 545px;
-    background-color: #61727e;
-    margin:0 auto;
-    display:flex;
-    flex-wrap:wrap;
-    border-radius: 25px;
-    border:3px solid #8DC6D4
+        width: 545px;
+        height: 545px;
+        background-color: #61727e;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin: 0 auto;
+        border-radius: 25px;
+        border: 3px solid #8DC6D4;
 
+    }
+    #board div {
+    /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
+    width: 100%; /* Make each tile take up the full width of its grid cell */
+    height: 100%; /* Make each tile take up the full height of its grid cell */
+    background-image: url("../Image/pipe.png");
+    background-size:cover;
     }
     
