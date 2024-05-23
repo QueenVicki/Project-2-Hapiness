@@ -56,3 +56,14 @@ background: url('../Image/Backgrounds/2.gif');
     background-size:cover;
     }
     
+    #board div img {
+        /* all img tags inside tiles */
+        width: 30%;
+        height: 30%;
+    
+        /* user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none; */
+    }

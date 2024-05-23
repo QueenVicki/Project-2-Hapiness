@@ -1,5 +1,5 @@
-let currMoleTile;
-let currPlantTile;
+let currGemTile;
+let currBombTile;
 let score = 0;
 let gameOver = false;
 
@@ -16,8 +16,8 @@ function setGame() {
         // tile.addEventListener("click", selectTile);
         document.getElementById("board").appendChild(tile);
     }
-    setInterval(setMole, 1000); // 1000 miliseconds = 1 second, every 1 second call setMole
-    setInterval(setPlant, 2000); // 2000 miliseconds = 2 seconds, every 2 second call setPlant
+    setInterval(setGem, 1000); // 1000 miliseconds = 1 second, every 1 second call setGem
+    setInterval(setBomb, 2000); // 2000 miliseconds = 2 seconds, every 2 second call setBomb
     }
 
     function getRandomTile() {
@@ -26,39 +26,39 @@ function setGame() {
         return num.toString();
     }
 
-    function setMole() {
+    function setGem() {
         if (gameOver) {
             return;
         }
-        if (currMoleTile) {
-            currMoleTile.innerHTML = "";
+        if (currGemTile) {
+            currGemTile.innerHTML = "";
         }
-        let mole = document.createElement("img");
-        mole.src = "../game_fun.webp";
+        let gem = document.createElement("img");
+        gem.src = "Assets/Image/Gem 2.png ";
     
         let num = getRandomTile();
-        if (currPlantTile && currPlantTile.id == num) {
+        if (currBombTile && currBombTile.id == num) {
             return;
         }
-        currMoleTile = document.getElementById(num);
-        currMoleTile.appendChild(mole);
+        currGemTile = document.getElementById(num);
+        currGemTile.appendChild(gem);
     }
     
-    // function setPlant() {
-    //     if (gameOver) {
-    //         return;
-    //     }
-    //     if (currPlantTile) {
-    //         currPlantTile.innerHTML = "";
-    //     }
-    //     let plant = document.createElement("img");
-    //     plant.src = "./piranha-plant.png";
+    function setBomb() {
+        if (gameOver) {
+            return;
+        }
+        if (currBombTile) {
+            currBombTile.innerHTML = "";
+        }
+        let bomb = document.createElement("img");
+        bomb.src = "Assets/Image/tl (1).webp ";
     
-    //     let num = getRandomTile();
-    //     if (currMoleTile && currMoleTile.id == num) {
-    //         return;
-    //     }
-    //     currPlantTile = document.getElementById(num);
-    //     currPlantTile.appendChild(plant);
-    // }
+        let num = getRandomTile();
+        if (currGemTile && currGemTile.id == num) {
+            return;
+        }
+        currBombTile = document.getElementById(num);
+        currBombTile.appendChild(bomb);
+    }
     
