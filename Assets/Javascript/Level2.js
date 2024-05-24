@@ -8,23 +8,21 @@ let gameOver = false;
 let gemCount = 0;
 let heartCount = 0;
 let BobCount = 0;
-const maxGemCount = 10;
-const maxHeartCount = 10;
-const maxBobCount = 10;
-const gameDuration = 12000; // 12,000 milliseconds = 120 seconds = 2 minutes
+const maxGemCount = 20;
+const maxHeartCount = 20;
+const maxBobCount = 20;
+const gameDuration = 120000; // 120,000 milliseconds = 120 seconds = 2 minutes
 let remainingTime = 120; // Time in seconds
 
 let gemInterval, heartInterval, bobInterval, swordInterval, bombInterval, gameTimer, countdownInterval;
-
 
 window.onload = function() {
     setGame();
 }
 
 function setGame() {
-    //set up the game board in html
-    for (let i = 0; i < 9; i++) { //i goes from 0 to 8, stops at 9, this is for the 9 grids for the pipes 
-        // <div id="0-8"></div>
+    // Set up the game board in HTML
+    for (let i = 0; i < 9; i++) { // i goes from 0 to 8, stops at 9, this is for the 9 grids for the pipes 
         let tile = document.createElement("div");
         tile.id = i.toString();
         tile.addEventListener("click", selectTile);
@@ -40,9 +38,8 @@ function setGame() {
     gameTimer = setTimeout(endGame, gameDuration);
 
     // Start the countdown timer
-    countdownInterval = setInterval(updateCountdown, 1200);
+    countdownInterval = setInterval(updateCountdown, 1000); // Correct interval to 1000 milliseconds (1 second)
 }
-
 
 function updateCountdown() {
     if (remainingTime > 0) {
@@ -210,3 +207,14 @@ function setSword() {
         clearInterval(countdownInterval);
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const playButton = document.getElementById('playButton');
+    const mySound = new Audio('Assets/Audio/Super Mario Bros. Theme Song.mp3');
+
+    playButton.addEventListener('click', () => {
+        mySound.play().catch(error => {
+            console.error('Error playing the audio:', error);
+        });
+        startGame();
+        playButton.style.display = 'none'; // Remove this line to keep the button visible
+    })})

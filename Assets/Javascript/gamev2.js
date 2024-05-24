@@ -50,7 +50,7 @@ const questions = [
         ]
     },
     {
-        question: "True or False: People who laugh more often tend to live longer lives.",
+        question: "True or False: People who laugh more often tend to \nlive longer lives.",
         correct: 0,
         answers: [
             "True.",

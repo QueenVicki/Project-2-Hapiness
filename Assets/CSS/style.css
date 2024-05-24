@@ -7,20 +7,26 @@ h1,h2 {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
+  margin: 10px 0;
 }
 
 body {
-background-color: #AAD6F3;
 font-family: Arial, Helvetica, sans-serif;
 text-align: center;
-background: url('../Image/Backgrounds/2.gif');
+background: url('../Image/Backgrounds/Sunflowerbackground.gif');
+background-size: cover;
 }
 
 .choice {
     background-color:white;
     color: black;
     display: block;
-    max-width: 50%;
+    margin: 10px auto; /* Add some margin for spacing */
+    padding: 10px 20px; /* Add padding for better click area */
+    max-width:fit-content;
+    background-size:cover;
+    border-radius: 5px; /* Optional: Add some border radius for better aesthetics */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 .choice:hover {
@@ -67,3 +73,59 @@ background: url('../Image/Backgrounds/2.gif');
         -webkit-user-select: none;
         -ms-user-select: none;
     }
+
+    .question {
+        margin: 0 auto;
+        position: relative;
+        width: 80%;
+        max-width: 545px; /* Added max-width to keep it within the background */
+        height: 320px; /* Let the height adjust based on content */
+        background-image: url("../Image/popper.webp");
+        background-repeat: no-repeat;
+        background-size: contain; /* Ensure the background image scales properly */
+        padding: 20px; /* Add padding to give some space inside the question container */
+        box-sizing: border-box; /* Ensure padding doesn't affect overall width */
+        overflow: auto; /* Add overflow to handle long content */
+    }
+
+    .play-button {
+        position:static;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        background: url(../Image/powerbutton.webp)
+    }
+    
+    .play-button img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #board div {
+        /* width: calc(50% - 10px); /* 2 columns for medium screens */
+    /* } */ */
+
+    #playButton {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #board div {
+        width: calc(100% - 10px); /* 1 column for small screens */
+    }
+
+    #playButton {
+        font-size: 1.2rem;
+    }
+
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+}
