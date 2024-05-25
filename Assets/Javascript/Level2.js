@@ -8,6 +8,7 @@ let gameOver = false;
 let gemCount = 0;
 let heartCount = 0;
 let BobCount = 0;
+let SwordCount;
 const maxGemCount = 20;
 const maxHeartCount = 20;
 const maxBobCount = 20;
