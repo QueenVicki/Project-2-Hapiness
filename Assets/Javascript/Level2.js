@@ -21,6 +21,27 @@ window.onload = function() {
     setGame();
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const playButton = document.getElementById('playButton');
+    const muteButton = document.getElementById('muteButton');
+    const mySound = new Audio('Assets/Audio/Super Mario Bros. Theme Song.mp3');
+    let isMuted = false;
+
+    playButton.addEventListener('click', () => {
+        mySound.play().catch(error => {
+            console.error('Error playing the audio:', error);
+        });
+        startGame();
+        playButton.disabled = true; // Disable the play button after clicking
+    });
+
+    muteButton.addEventListener('click', () => {
+        isMuted = !isMuted;
+        mySound.muted = isMuted;
+        muteButton.innerHTML = isMuted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+    });
+});
+
 function setGame() {
     // Set up the game board in HTML
     for (let i = 0; i < 9; i++) { // i goes from 0 to 8, stops at 9, this is for the 9 grids for the pipes 
@@ -124,7 +145,7 @@ function setBob() {
         return;
     }
     if (BobCount >= maxBobCount) {
-        clearInterval(BobInterval);
+        clearInterval(bobInterval);
         return;
     }
     if (currBobTile) {
@@ -208,14 +229,3 @@ function setSword() {
         clearInterval(countdownInterval);
     }
 }
-document.addEventListener('DOMContentLoaded', () => {
-    const playButton = document.getElementById('playButton');
-    const mySound = new Audio('Assets/Audio/Super Mario Bros. Theme Song.mp3');
-
-    playButton.addEventListener('click', () => {
-        mySound.play().catch(error => {
-            console.error('Error playing the audio:', error);
-        });
-        startGame();
-        playButton.style.display = 'none'; // Remove this line to keep the button visible
-    })})
