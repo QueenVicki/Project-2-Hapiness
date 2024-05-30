@@ -117,8 +117,8 @@ const questions = [
         question: "True or False: Sunflowers are heliotropic, meaning they track the movement of the sun across the sky.",
         correct: 1,
         answers: [
-            "A) Plants consume only water for energy.",
-            "B) Plants can communicate with each other through chemical signals."
+            "Plants consume only water for energy.",
+            "Plants can communicate with each other through chemical signals."
         ]
     },
     {
@@ -126,29 +126,29 @@ const questions = [
         correct: 3,
         answers: [
             "People are born with all their brain cells.",
-            "B) People blink about 10,000 times a day.",
-            "C) People can't feel pain in their dreams.",
-            "D) People have more bones in their feet than in their hands."
+            "People blink about 10,000 times a day.",
+            "People can't feel pain in their dreams.",
+            "People have more bones in their feet than in their hands."
         ]
     },
     {
         question: "Which of the following is a true statement about plants?",
         correct: 1,
         answers: [
-            "A) Plants consume only water for energy.",
-            "B) Plants can communicate with each other through chemical signals.",
-            "C) Plants respire only during the day.",
-            "D) Plants don't require soil to grow."
+            "Plants consume only water for energy.",
+            "Plants can communicate with each other through chemical signals.",
+            "Plants respire only during the day.",
+            "Plants don't require soil to grow."
         ]
     },
     {
         question: "Which of the following is a true statement about people?",
         correct: 1,
         answers: [
-            "A) People have unique tongue prints like fingerprints.",
-            "B) People can only see in black and white when they're born.",
-            "C) People can't digest spinach properly.",
-            "D) People's ears never stop growing throughout their life."
+            "People have unique tongue prints like fingerprints.",
+            "People can only see in black and white when they're born.",
+            "People can't digest spinach properly.",
+            "People's ears never stop growing throughout their life."
         ]
     },
 ];
@@ -205,6 +205,13 @@ document.addEventListener('DOMContentLoaded', () => {
         answer.classList.add('choice');
         answer.textContent = answerText;
 
+        function updateImage() {
+            const imageIndex = Math.floor(score => 2,4,6);
+            if (imageIndex < images.length) {
+                changingImage.src = images[imageIndex];
+            }
+        }
+
         // ========================================
         // All the changes happen inside of here
         answer.addEventListener('click', () => {
@@ -213,8 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const updatedScore = updateScore(result, score);
             score = updatedScore;
 
-            if (score >= 3) {
-                if (confirm("Congratulations you can level up to Level 2!")) {
+            if (score >= 6) {
+                if (confirm("Congratulations, wasn't that easy, you can now move up to Level 2!")) {
                     window.open("Level2.html", '_blank');
                 }
             };

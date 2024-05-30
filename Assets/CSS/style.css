@@ -121,27 +121,24 @@ background-size: cover;
     }
 
 
-    /* Media queries for responsiveness */
+ /* Additional styles for responsiveness */
 @media (max-width: 768px) {
-    #board div {
-        /* width: calc(50% - 10px); /* 2 columns for medium screens */
-    /* } */ */
+    #header-image {
+        max-width: 90%;
+    }
 
-    #playButton {
-        font-size: 1.5rem;
+    #header-image img {
+        max-width: 50%;
     }
 }
 
 @media (max-width: 480px) {
-    #board div {
-        width: calc(100% - 10px); /* 1 column for small screens */
-    }
-
-    #playButton {
-        font-size: 1.2rem;
-    }
-
     h1, h2 {
         font-size: 1.2rem;
+    }
+
+    .choice {
+        width: 90%;
+        font-size: 1rem;
     }
 }
