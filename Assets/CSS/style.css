@@ -1,7 +1,9 @@
-*{
+* {
     padding: 5px;
     margin-bottom: 5px;
+    box-sizing: border-box;
 }
+
 #changing-image {
     max-width: 500px;
     margin: 20px auto;
@@ -31,8 +33,9 @@
     display: inline-block;
     width: 200px;
     height: 100px;
-    background-size: cover;
+    background-size:contain;
     background-position: center;
+    background-image: url("Assets/Image/pipe.png");
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -40,6 +43,7 @@
     padding:0;
     margin:0;
     position: relative;
+    bottom:190px;
 }
 
 #start-button:hover {
