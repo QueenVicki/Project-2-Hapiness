@@ -2,12 +2,51 @@
     padding: 5px;
     margin-bottom: 5px;
 }
-#header-image {
+#changing-image {
     max-width: 500px;
     margin: 20px auto;
 }
 
-#header-image img {
+#changing-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#h1-homepage {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-size: xx-large;
+    font-style: normal;
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Full viewport height */
+}
+
+#start-button {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    padding:0;
+    margin:0;
+    position: relative;
+}
+
+#start-button:hover {
+    opacity: 0.8; /* Slightly transparent on hover */
+}
+
+#start-button img {
     width: 100%;
     height: auto;
     display: block;
@@ -24,8 +63,12 @@ h1,h2 {
 body {
 font-family: Arial, Helvetica, sans-serif;
 text-align: center;
-background: url('../Image/Backgrounds/Sunflowerbackground.gif');
+background: url('../Image/Backgrounds/Sunflowerbackground.gif'); 
 background-size: cover;
+background-repeat:no-repeat;
+position: relative;
+width:100%;
+height: 100%;
 }
 
 .choice {

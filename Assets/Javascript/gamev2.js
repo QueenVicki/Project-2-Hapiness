@@ -50,7 +50,7 @@ const questions = [
         ]
     },
     {
-        question: "True or False: People who laugh more often tend to \nlive longer lives.",
+        question: "True or False: People who laugh more often tend to live longer lives.",
         correct: 0,
         answers: [
             "True.",
@@ -76,7 +76,7 @@ const questions = [
         ]
     },
     {
-        question: "Which of the following is a true statement about plants?",
+        question: "Which else of the following is a true statement about plants?",
         correct: 3,
         answers: [
             "All plants require the same amount of water to thrive.",
@@ -117,8 +117,8 @@ const questions = [
         question: "True or False: Sunflowers are heliotropic, meaning they track the movement of the sun across the sky.",
         correct: 1,
         answers: [
-            "Plants consume only water for energy.",
-            "Plants can communicate with each other through chemical signals."
+            "True.",
+            "False."
         ]
     },
     {
@@ -153,91 +153,187 @@ const questions = [
     },
 ];
 
-
 function generateNumber() {
-    var randNum = Math.round((Math.random() * (questions.length - 1)))
-    return randNum
-};
-
+    return Math.round(Math.random() * (questions.length - 1));
+}
 
 function checkAnswer(answer, choice) {
-    let  result
-    if (answer === choice) {
-        result = true
-    } else {
-        result = false   
-    }    
-    return result
-};
-
-function updateScore(result, score) {
-    let next;
-    let scoreEl = document.querySelector('#score');
-    let updatedScore = score;
-    if (result) {
-        updatedScore++;
-    } else {
-        updatedScore--;
-        updatedScore < 0 ? updatedScore = 0 : updatedScore;
-    };
-    scoreEl.textContent = updatedScore;
-    return updatedScore;
-};
-
+    return answer === choice;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-    let sessionQuestions = [...questions];
-    let ctn = document.querySelector('#questions');
+    const scoreElement = document.getElementById('score');
+    const changingImage = document.getElementById('changing-image');
+    const questionContainer = document.getElementById('questions');
+    const images = [
+        'Assets/Image/Sunflower/Sunflower default.jpg',
+        'Assets/Image/Sunflower/Sunflower 2nd stage.jpg',
+        'Assets/Image/Sunflower/Sunflower 3rd stage.jpg',
+        'Assets/Image/Sunflower/Sunflower last stage.jpg'
+    ];
+
     let score = 0;
+    let sessionQuestions = [...questions];
     let randNum = generateNumber();
 
-    game();
+    function updateImage() {
+        const imageIndex = Math.floor(score / 2);
+        if (imageIndex < images.length) {
+            changingImage.src = images[imageIndex];
+        }
+    }
+
+    function updateScore(result) {
+        if (result) {
+            score++;
+        } else {
+            score = Math.max(0, score - 1);
+        }
+        scoreElement.textContent = `Score: ${score}`;
+        updateImage();
+    }
 
     function game() {
-        currentQuestion = sessionQuestions[randNum];
-        const {correct, question: label} = currentQuestion;
-       let el = document.createElement('ul');
-       el.classList.add('question');
-       el.textContent = label;
+        let currentQuestion = sessionQuestions[randNum];
+        const { correct, question: label } = currentQuestion;
 
-       currentQuestion.answers.forEach((answerText, answerIndex) => {
-        answer = document.createElement('li');
-        answer.classList.add('choice');
-        answer.textContent = answerText;
+        let el = document.createElement('ul');
+        el.classList.add('question');
+        el.textContent = label;
 
-        function updateImage() {
-            const imageIndex = Math.floor(score => 2,4,6);
-            if (imageIndex < images.length) {
-                changingImage.src = images[imageIndex];
-            }
-        }
+        currentQuestion.answers.forEach((answerText, answerIndex) => {
+            let answer = document.createElement('li');
+            answer.classList.add('choice');
+            answer.textContent = answerText;
 
-        // ========================================
-        // All the changes happen inside of here
-        answer.addEventListener('click', () => {
-            const result = checkAnswer(correct, answerIndex);
-            
-            const updatedScore = updateScore(result, score);
-            score = updatedScore;
+            answer.addEventListener('click', () => {
+                const result = checkAnswer(correct, answerIndex);
+                updateScore(result);
 
-            if (score >= 6) {
-                if (confirm("Congratulations, wasn't that easy, you can now move up to Level 2!")) {
-                    window.open("Level2.html", '_blank');
-                }
-            };
-            
-            randNum = generateNumber()
-            currentQuestion = sessionQuestions[randNum];
-            ctn.removeChild(el);
-            game();
-        })
-        //^^ All the changes happen inside of here ^^
-        // ========================================
-        
-        el.appendChild(answer);
-        ctn.appendChild(el);
-        //^^ And the new question is injected here ^^
-        // ========================================
-    });
-    };
+                if (score >= 6) {
+                    if (confirm("Congratulations, wasn't that easy, you can now move up to Level 2!")) {
+                        window.open("Level2.html", '_blank');
+                    }
+                };
+
+                randNum = generateNumber();
+                questionContainer.removeChild(el);
+                game();
+            });
+
+            el.appendChild(answer);
+        });
+
+        questionContainer.appendChild(el);
+    }
+
+    game();
 });
+
+// function generateNumber() {
+//     var randNum = Math.round((Math.random() * (questions.length - 1)))
+//     return randNum
+// };
+
+
+// function checkAnswer(answer, choice) {
+//     let  result
+//     if (answer === choice) {
+//         result = true
+//     } else {
+//         result = false   
+//     }    
+//     return result
+// };
+
+// function updateScore(result, score) {
+//     let next;
+//     let scoreEl = document.querySelector('#score');
+//     let updatedScore = score;
+//     if (result) {
+//         updatedScore++;
+//     } else {
+//         updatedScore--;
+//         updatedScore < 0 ? updatedScore = 0 : updatedScore;;
+//     };
+//     // scoreEl.textContent = updatedScore;
+//     // return updatedScore;
+
+//     scoreElement.textContent = updatedScore;;
+//         updateImage();
+// };
+
+// function updateImage() {
+//     const imageIndex = Math.floor(score / 2);
+//     if (imageIndex < images.length) {
+//         changingImage.src = images[imageIndex];
+//     }
+// }
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     let sessionQuestions = [...questions];
+//     let ctn = document.querySelector('#questions');
+//     let score = 0;
+//     let randNum = generateNumber();
+
+//     game();
+
+//     function game() {
+//         currentQuestion = sessionQuestions[randNum];
+//         const {correct, question: label} = currentQuestion;
+//        let el = document.createElement('ul');
+//        el.classList.add('question');
+//        el.textContent = label;
+
+//        currentQuestion.answers.forEach((answerText, answerIndex) => {
+//         answer = document.createElement('li');
+//         answer.classList.add('choice');
+//         answer.textContent = answerText;
+
+//         function updateImage() {
+//             const imageIndex = Math.floor(score => 2,4,6);
+//             if (imageIndex < images.length) {
+//                 changingImage.src = images[imageIndex];
+//             }
+//         }
+
+//         document.addEventListener('DOMContentLoaded', () => {
+//             const scoreElement = document.getElementById('score');
+//             const changingImage = document.getElementById('changing-image');
+//             const questionContainer = document.getElementById('questions');
+//             const images = [
+//                 'Assets/Image/Sunflower/Sunflower default.jpg',
+//                 'Assets/Image/Sunflower/Sunflower 2nd stage.jpg',
+//                 'Assets/Image/Sunflower/Sunflower 3rd stage.jpg',
+//                 'Assets/Image/Sunflower/Sunflower last stage.jpg'
+//         ]});
+
+//         // ========================================
+//         // All the changes happen inside of here
+//         answer.addEventListener('click', () => {
+//             const result = checkAnswer(correct, answerIndex);
+
+//             const updatedScore = updateScore(result, score, 'changing-image');
+//             score = updatedScore;
+
+//             if (score >= 6) {
+//                 if (confirm("Congratulations, wasn't that easy, you can now move up to Level 2!")) {
+//                     window.open("Level2.html", '_blank');
+//                 }
+//             };
+            
+//             randNum = generateNumber()
+//             currentQuestion = sessionQuestions[randNum];
+//             ctn.removeChild(el);
+//             game();
+//         })
+//         //^^ All the changes happen inside of here ^^
+//         // ========================================
+        
+//         el.appendChild(answer);
+//         ctn.appendChild(el);
+//         //^^ And the new question is injected here ^^
+//         // ========================================
+//     });
+//     };
+// });
