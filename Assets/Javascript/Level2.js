@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mySound.play().catch(error => {
             console.error('Error playing the audio:', error);
         });
-        startGame();
+        // startGame();
         playButton.disabled = true; // Disable the play button after clicking
     });
 
