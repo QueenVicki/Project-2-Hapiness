@@ -9,9 +9,9 @@ let gemCount = 0;
 let heartCount = 0;
 let BobCount = 0;
 let SwordCount;
-const maxGemCount = 20;
-const maxHeartCount = 20;
-const maxBobCount = 20;
+const maxGemCount = 30;
+const maxHeartCount = 30;
+const maxBobCount = 30;
 const gameDuration = 120000; // 120,000 milliseconds = 120 seconds = 2 minutes
 let remainingTime = 120; // Time in seconds
 
@@ -91,9 +91,8 @@ function endGame() {
     }
 
     function setGem() {
-        if (gameOver) {
+        if (gameOver)
             return;
-        }
         if (gemCount >= maxGemCount) {
             clearInterval(gemInterval);
             return;
@@ -115,10 +114,9 @@ function endGame() {
 }
 
     function setHeart() {
-        if (gameOver) {
+        if (gameOver)
             return;
-        }
-
+    
         if (heartCount >= maxHeartCount) {
             clearInterval(heartInterval);
             return;
