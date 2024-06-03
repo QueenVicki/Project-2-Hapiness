@@ -14,7 +14,7 @@ The game has 2 levels,it starts off with a series of questions and if the player
 <li> Level 2 was inspired by Kenny Yip Coding, I found his tutorial on youtube which helped serve some of my ideas for the level 2 that I had in mind:</li>
 <ul>
     <li>Github - https://github.com/ImKennyYip</li>
-    <li>Youtube tutorial used - https://youtu.be/ej8SatOj3V4?list=PLnKe36F30Y4bLhA-st9sC4ZthyV7nsL2Q<li>
+    <li>Youtube tutorial used - https://youtu.be/ej8SatOj3V4?list=PLnKe36F30Y4bLhA-st9sC4ZthyV7nsL2Q</li>
 </ul>
 </ol>
 
@@ -52,11 +52,11 @@ Lighthouse:
 
 <h2> Final notes </h2>
 I wanted to share thanks to the following for helping me complete this project 
-<ul>
+<ol>
 <li> My Course instructor Komal Karir for helping encourage me throughout </li>
 <li> Kevin Yip for his tutorial on the 'Whac a mole'</li>
 <li> Canva and their inspiration through the design:</li>
-<ol>
+<ul>
     <li> the design 'Blue Colorful Retro Vintage Illustrated Game Pixel Art Animated Presentation' was used as inspiration for a lot of the pieces used in the game. </li>
-    </ol>
 </ul>
+</ol>
