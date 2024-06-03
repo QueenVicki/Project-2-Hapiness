@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const result = checkAnswer(correct, answerIndex);
                 updateScore(result);
 
-                if (score >= 6) {
+                if (score >= 4) {
                     if (confirm("Congratulations, wasn't that easy, you can now move up to Level 2!")) {
                         window.open("Level2.html", '_blank');
                     }
