@@ -1,4 +1,4 @@
-# Project-2-Hapiness
+# Happiness: A growth story
 
 Website 🔗: https://queenvicki.github.io/Project-2-Hapiness/
 <img src="Assets/Image/Responsiveness-image-bytes.png">
