@@ -1,6 +1,7 @@
 # Project-2-Hapiness
 
 Website 🔗: https://queenvicki.github.io/Project-2-Hapiness/
+<img src="Assets/Image/Responsiveness-image-bytes.png">
 
 <h2> Aim </h2>
 As a lover of retro games, the main aim of this game was to replicate this and make it so that it can be enjoyed by any age that loves retro gamers, but a simpler version.
@@ -11,8 +12,8 @@ The game has 2 levels,it starts off with a series of questions and if the player
 <ul>
 <li> Level 1 was inspired by basic question and answer as discussed with my college professor.</li>
 <li> Level 2 was inspired by Kenny Yip Coding, I found his tutorial on youtube which helped serve some of my ideas for the level 2 I had in mind:</li>
-<ol>Github - https://github.com/ImKennyYip</ol>
-<ol>Youtube tutorial used - https://youtu.be/ej8SatOj3V4?list=PLnKe36F30Y4bLhA-st9sC4ZthyV7nsL2Q<ol>
+    <ol>Github - https://github.com/ImKennyYip</ol>
+    <ol>Youtube tutorial used - https://youtu.be/ej8SatOj3V4?list=PLnKe36F30Y4bLhA-st9sC4ZthyV7nsL2Q<ol>
 </ul>
 
 <h2> Audience </h2>
@@ -38,4 +39,20 @@ These were created directly in Canva:
 <ul>
 <li> In level 2, the gem and heart sometimes get stuck and don't move from their pipes, this may have been fixed but is a known issue</li>
 <li> The responsiveness on the pages aren't great but this was being worked on and will be used for future development</li>
+</ul>
+
+<h2> Reports and checks </h2>
+W3 Validator:
+<img src="Assets/Image/Report_1.png">
+
+Lighthouse:
+<img src="Assets/Image/Report_2_lighthouse.png">
+
+<h2> Final notes </h2>
+I wanted to share thanks to the following for helping me complete this project 
+<ul>
+<li> My Course instructor Komal Karir for helping encourage me throughout </li>
+<li> Kevin Yip for his tutorial on the 'Whac a mole'</li>
+<li> Canva and their inspiration through the design:</li>
+    <ol> the design 'Blue Colorful Retro Vintage Illustrated Game Pixel Art Animated Presentation' was used as inspiration for a lot of the pieces used in the game. </ol>
 </ul>
