@@ -9,14 +9,14 @@ As a lover of retro games, the main aim of this game was to replicate this and m
 <h2> About: </h2>
 This is a game with questions and a game of 'Whac a mole', all done mostly.
 The game has 2 levels,it starts off with a series of questions and if the player gets up to '4' points on the first level, they can move up to Level 2.
-<ul>
+<ol>
 <li> Level 1 was inspired by discussion and lack of inspiration my college professor and my friend Ife.</li>
 <li> Level 2 was inspired by Kenny Yip Coding, I found his tutorial on youtube which helped serve some of my ideas for the level 2 that I had in mind:</li>
 <ul>
-    <ol>Github - https://github.com/ImKennyYip</ol>
-    <ol>Youtube tutorial used - https://youtu.be/ej8SatOj3V4?list=PLnKe36F30Y4bLhA-st9sC4ZthyV7nsL2Q<ol>
+    <li>Github - https://github.com/ImKennyYip</li>
+    <li>Youtube tutorial used - https://youtu.be/ej8SatOj3V4?list=PLnKe36F30Y4bLhA-st9sC4ZthyV7nsL2Q<li>
 </ul>
-</ul>
+</ol>
 
 <h2> Audience </h2>
 Any age that appreciates retro games and sounds would like this game.
@@ -56,7 +56,7 @@ I wanted to share thanks to the following for helping me complete this project
 <li> My Course instructor Komal Karir for helping encourage me throughout </li>
 <li> Kevin Yip for his tutorial on the 'Whac a mole'</li>
 <li> Canva and their inspiration through the design:</li>
-<ul>
-    <ol> the design 'Blue Colorful Retro Vintage Illustrated Game Pixel Art Animated Presentation' was used as inspiration for a lot of the pieces used in the game. </ol>
-    </ul>
+<ol>
+    <li> the design 'Blue Colorful Retro Vintage Illustrated Game Pixel Art Animated Presentation' was used as inspiration for a lot of the pieces used in the game. </li>
+    </ol>
 </ul>
