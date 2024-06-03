@@ -57,9 +57,8 @@ I wanted to share thanks to the following for helping me complete this project
 <li> I'd also like to thank Philip Hovre who made time during his project to help me with coding Level 1 when I couldn't get the logic of it right https://github.com/phildehovre/Project-2-Hapiness </li>
 <li> Kevin Yip for his tutorial on the 'Whac a mole'</li>
 <li> Canva and their inspiration through the design:</li>
-<li> A Leon AI image was used for the quiz section, I used https://app.leonardo.ai/ to generate the image </li>
-
 <ul>
     <li> the design 'Blue Colorful Retro Vintage Illustrated Game Pixel Art Animated Presentation' was used as inspiration for a lot of the pieces used in the game. </li>
 </ul>
+<li> A Leon AI image was used for the quiz section, I used https://app.leonardo.ai/ to generate the image </li>
 </ol>
